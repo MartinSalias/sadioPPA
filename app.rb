@@ -12,7 +12,7 @@ post '/intento' do
   if @@motor.intentar @letra
     @resultado = "CORRECTO!"
   else
-    @resultado = "Letra incorrecta"
+    @resultado = "Letra iNNcorrecta"
   end
   erb :portada
 end
