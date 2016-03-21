@@ -8,4 +8,7 @@ class Motor
     return @palabra.include? letra
   end
 
+  def display
+    "A _ _ A"
+  end
 end

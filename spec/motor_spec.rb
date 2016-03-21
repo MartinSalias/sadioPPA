@@ -12,4 +12,10 @@ describe "Motor de Reglas del Ahorcado" do
     juego.intentar("J").should == false
   end
 
+  it "Si la palabra es AGUA y pruebo la A tengo que tener A _ _ A" do
+    juego = Motor.new "AGUA"
+    juego.intentar("A")
+    juego.display.should == "A _ _ A"
+  end
+
 end
