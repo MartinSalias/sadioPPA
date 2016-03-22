@@ -9,10 +9,8 @@ end
 
 post '/intento' do
   @letra = params[:letra]
-  if @@motor.intentar @letra
-    @resultado = "CORRECTO!"
-  else
-    @resultado = "Letra incorrecta"
-  end
+  @@motor.intentar @letra
+  @vidas = @@motor.vidas
+  @display = @@motor.display
   erb :portada
 end

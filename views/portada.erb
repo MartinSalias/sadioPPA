@@ -1,9 +1,14 @@
 <h2>Ahorcado 3.0</h2>
 
+<p>Vidas: <%= @vidas %>
+<br><br>
+<p><%= @display %>
+
+
+
 <form action="/intento" method="post">
   Letra <input type="text" name="letra">
   <input type="submit" value="Intentar">
 </form>
 
 <p><%= @resultado %>
-  

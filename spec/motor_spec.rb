@@ -18,4 +18,23 @@ describe "Motor de Reglas del Ahorcado" do
     juego.display.should == "A _ _ A"
   end
 
+  it "Si la palabra es AGUA y pruebo la A y la G tengo que tener A G _ A" do
+    juego = Motor.new "AGUA"
+    juego.intentar("A")
+    juego.intentar("G")
+    juego.display.should == "A G _ A"
+  end
+
+  it "Si la palabra es AGUA y pruebo 6 veces la Z, perdi" do
+    juego = Motor.new "AGUA"
+    6.times { juego.intentar("Z") }
+    juego.vidas.should == 0
+  end
+
+  it "Si la palabra es AGUA y pruebo 5 veces la Z, me queda una vida" do
+    juego = Motor.new "AGUA"
+    5.times { juego.intentar("Z") }
+    juego.vidas.should == 1
+  end
+
 end
